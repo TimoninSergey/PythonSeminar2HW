@@ -4,10 +4,10 @@
 0,56 -> 11 """
 
 def number_sum(number):
-    number_digits_only = ''
-    for char in number:
-        if char.isdigit():
-            number_digits_only = number_digits_only + char
+    number_digits_only = ''.join(filter(lambda i: i is not ',', number))
+#    for char in number:
+#        if char.isdigit():
+#            number_digits_only = number_digits_only + char
     sum = 0
     for char in number_digits_only:
         sum = sum + int(char)

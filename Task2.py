@@ -4,11 +4,11 @@
 Сумма 9.06 """
 
 def sequence_list_fill (number):
-    sequence_list = []
-    r = range(1, number+1)
-    for i in r:
-        sequence_list_element = round((1 + 1/i)**i, 2)
-        sequence_list.append(sequence_list_element)
+    sequence_list = [round((1 + 1/i)**i, 2) for i in range(1, number+1)]
+#    r = range(1, number+1)
+#    for i in r:
+#        sequence_list_element = round((1 + 1/i)**i, 2)
+#        sequence_list.append(sequence_list_element)
     print(sequence_list)
     return sequence_list
 
